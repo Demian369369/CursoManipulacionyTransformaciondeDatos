@@ -1,0 +1,6 @@
+reando Arrays
+1 ✅ np.arange (Start,Ens,Steps) → es como el list( range(0,10)) pero como arrange 2 ✅ np.zeros(n) 3 ✅ np.ones(n) 4 ✅ np.linspace(Start, End, Cant n de Start a End) 5 ✅ np.eye(n) ·· Matriz identidad
+
+Arrays con numeros randoms
+
+☑️ np.random.rand(Columnas, Filas, mas dimensiones ) ·· Ambos con numeros randoms ☑️ np.random.randint(Start, End, Dimensiones) ·· N random entre Start y End y tupla dims

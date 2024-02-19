@@ -1,0 +1,20 @@
+Funciones principales de Pandas
+Funciones principales de Panadas 🐼
+✅ .head() → trae los primeros datos ✅ .info() → Columnas, indices, cuales noson nulos, tipo de dato que maneja ✅ .describe() → Solo de las columnas numericas me arroja datos estadisticos [ media,max,miun,mediana,etc ] ✅ .memory_usage() → memoria utilizada ✅ .value_counts() → cuenta valores de una columna ✅ .drop_duplicates() → elimina los valores repetidos ✅ .sort_values( columna para ordenar ) → Se puede ordenar de forma descendiente con la bandera ascending=False
+
+-- Extras 👇🏻
+···· Probando el drop_duplicate
+
+Duplicamos valores ···
+
+zzz.jpg
+··· 2 Elimando los duplicados ···
+
+zzz.jpg
+👆🏻 Importante lo iltimo [El drop solo, lo elimina en forma visual] ··· 👇🏻 Si quieren eliminarlo completamente del DF ···
+
+zzz.jpg
+··· Dt extra del extra :) ··· Si quieren mantener una copia tiene que usar keep= ···
+
+zzz.jpg
+Re laaarga pero espero que les sirva [AL FINAL DEL CURSO subo el Notion y G colab por si lo quieren]

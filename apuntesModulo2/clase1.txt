@@ -1,0 +1,11 @@
+PANDAS
+
+Manipulación y análisis de datos. El nombre viene de “Panel data”. • Velocidad • Poco código • Múltiples formatos de archivos • Alineación inteligente
+
+++Pandas Series++
+
+Es muy parecido a un array de una dimensión (o vector) de NumPy. • Arreglo unidimensional indexado • Búsqueda por índice • Slicing • Operaciones aritméticas • Distintos tipos de datos
+
+++Pandas DataFrame++
+
+Muy parecido a las estructuras matriciales trabajadas con NumPy. • Estructura principal • Arreglo de dos dimensiones • Búsqueda por índice (columnas o filas) • Slicing • Operaciones aritméticas • Distintos tipos de datos • Tamaño variable

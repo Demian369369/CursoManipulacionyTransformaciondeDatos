@@ -1,0 +1,13 @@
+Se puede usar las funciones lambda en el método .agg(), para obtener funciones custom ya sea para modificar un valor o para filtrar valores.
+
+Un ejemplo puede ser el siguiente:
+
+
+df_books.groupby('Author').agg({'Year':lambda x: [i-2000 for i in x], 'Reviews':lambda x: sum([i**2 for i in x])})
+En donde a la columna Year se le resta 2000 a los años, y se obtiene una lista de los dos últimos dígitos del año relacionado con cada autor. Otro ejemplo es que los Reviews en vez de sumar cada valor se suma el cuadrado de sus valores.
+
+El resultado que obtuve es el siguiente:
+
+
+
+Imagen_1.JPG

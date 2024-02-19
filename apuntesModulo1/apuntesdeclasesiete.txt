@@ -1,0 +1,106 @@
+Funciones de NumPy
+arr = np.random.randint(1, 20, 10)
+matriz = arr.reshape(2,5)
+matriz
+----> array([[18,  8,  3, 11,  1],
+       [15, 10, 13,  9, 15]])
+arr
+----> array([18,  8,  3, 11,  1, 15, 10, 13,  9, 15])
+arr.max() ----> 18
+matriz.max() ----> 18
+Podemos regresar los máximos de cada fila o columna especificando el eje.
+
+
+matriz.max(1) ----> array([18, 15])
+matriz.max(0) ---->array([18, 10, 13, 11, 15])
+Tambien tenemos .argmax() que nos devuelve la posición del elemento
+
+
+arr.argmax() ----> 0
+matriz.argmax(0) ----> array([0, 1, 1, 0, 1])
+De forma análoga tenemos .min()
+
+
+arr.min() ----> 1
+arr.argmin() ----> 4
+matriz.min(0) ----> array([15,  8,  3,  9,  1])
+matriz.argmin(1) ----> array([4, 3])
+Podemos saber la diferencia de valor más bajo con el más alto.
+
+
+arr.ptp() # 18 - 1 ----> 17
+matriz.ptp(0)  ----> array([ 3,  2, 10,  2, 14])
+Para hacer análisis estádistico se tienen la siguientes funciones.
+
+
+Ordenar los elementos:
+arr.sort() ----> array([1, 3, 8, 9,10, 11,13, 15,15,18])
+Obtener un percentil:
+
+
+np.percentile(arr, 0) ----> 1.0
+Mediana:
+
+
+np.median(arr) ----> 10.5
+Desviación estándar:
+
+
+np.std(arr) ----> 5.080354
+Varianza:
+
+
+np.var(arr) ----> 25.81000
+Promedio
+
+
+np.mean(arr) ----> 10.3
+Lo mismo aplica para las matrices.
+
+
+np.median(matriz, 1) ----> array([ 8., 15.])
+Se pueden unir dos arrays por medio de la concatenación
+
+
+a = np.array([[1,2], [3,4]])
+b= np.array([5, 6])
+np.concatenate((a,b), axis = 0)
+----------------------------------------------------
+ValueError                  Traceback (most recent call last)
+<ipython-input-213-97c6fb2c6837> in <module>()
+----> 1 np.concatenate((a,b), axis = 0)
+
+<__array_function__ internals> in concatenate(*args, **kwargs)
+
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+El error anterior es debido a a tiene 2 dimensiones mientras que b tiene 1.
+
+
+print(a.ndim) ----> 2
+b.ndim ----> 1
+b = np.expand_dims(b, axis = 0)
+np.concatenate((a,b), axis = 0)
+----> array([[1, 2],
+       [3, 4],
+       [5, 6]])
+De igual forma podemos agregarlo en el otro eje
+
+
+np.concatenate((a,b), axis = 1)
+-----------------------------------------------
+ValueError               Traceback (most recent call last)
+<ipython-input-217-3ae7237876ab> in <module>()
+      1 # De igual forma podemos agregarlo en el otro eje
+----> 2 np.concatenate((a,b), axis = 1)
+
+<__array_function__ internals> in concatenate(*args, **kwargs)
+
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 2 and the array at index 1 has size 1
+Como b es una fila y no una columna, no se puede concatenar a menos que se aplique la transpuesta.
+
+
+np.concatenate((a,b.T), axis = 1)
+----> array([[1, 2, 5],
+       [3, 4, 6]])
+
+visualiza los arrays como cajas que ordenan datos Para iniciar a entender los arrays tal vez es útil visualizarlos en forma de recta(vector), plano(matriz ) o filas y columnas; será suficiente para analizar datos estructurados, pero este entendimiento quedará corto al momento de tratar de interpretar tensores cuando se trabaja con redes neuronales, en estos casos tratar de visualizar una 4ta dimensión en un gráfico es imposible, y tendrán problemas al querer concatenar tensores a través de un eje que salga de la representación de filas y columnas. En mi caso yo interpreto los arrays (vectores, matrices o tensores) como una caja que contiene otras cajas que puede contener otras cajas, dependiendo el tamaño de la caja (que depende del nivel donde se encuentre) será igual a su axis. solo intenten visualizar los corchetes como cajas que empaquetan otras cajas que al final contienen nuestros datos organizados. Esta metáfora me ayuda a poder manipular tensores con sus dimensiones y entenderlos de forma más exacta.

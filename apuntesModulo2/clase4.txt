@@ -1,0 +1,12 @@
+Si quieren borrar un elemento en especifico por ejemplo un autor
+
+Obtenemos los indices donde se encuentra el autor que queremos borrar
+
+
+index_author=df_books[df_books['Author']=="Fredrik Backman"].index
+index_author
+Le pasamos ese indice a drop para borrarlo
+
+
+df_books.drop(index_author,inplace=True)
+df_books.head(10)

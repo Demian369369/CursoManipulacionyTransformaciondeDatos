@@ -1,0 +1,3 @@
+Filtrados por condiciones
+Aquí dejo un pequeño aporte, me dio curiosidad por cómo podría filtrarse una columa de texto. Comparto la solución.
+<img src="https://static.platzi.com/media/user_upload/Screenshot_1-eecaaea1-4233-4773-a383-a8cbd1da3ef6.jpg" alt="Screenshot_1.jpg"/>

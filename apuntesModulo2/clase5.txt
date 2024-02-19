@@ -1,0 +1,21 @@
+Manejo de datos nulos:
+
+El método para reemplazar nulos de interpolación visto en clase es muy interesante. Tiene variados argumentos que la hacen muy poderosa. Algunos son: METHOD: método usado par interpolar. Por default es el linear. Pero existen otros:
+
+Time: para interpolar entre intervalos de tiempo.
+Index: reemplaza el nulo por el valor del index.
+Pad: reemplaza el nulo por algún valor existente en el dataframe.
+Se puede especificar que la interpolación sea cuadrática, cúbica , polinómica, entre otros.
+Se puede especificar que se reemplace por el cero, o el valor contiguo más cercano, entre otros.
+AXIS: tiene 3 opciones:
+
+En dirección de los index (axis = 0).
+En dirección de las columnas (axis = 1).
+None: ninguna. Esta es la opción default.
+LIMIT (opcional) : el número máximo de NULOS consecutivos que se pueden reemplazar. Tiene que ser mayor a cero.
+LIMIT_DIRECTION (opcional): idem anterior pero en alguna dirección. Puede ser:
+
+Forward: hacia adelante.
+Backward: hacia atrás.
+Both: ambos.
+FUENTE : https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html

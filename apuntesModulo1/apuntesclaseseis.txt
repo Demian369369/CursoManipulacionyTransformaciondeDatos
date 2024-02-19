@@ -1,0 +1,2 @@
+Shape y Reshape
+1.- Indica la forma de los arreglos y dice con que estructura se trabaja, como se comporta, su longitud y comportamiento etc.

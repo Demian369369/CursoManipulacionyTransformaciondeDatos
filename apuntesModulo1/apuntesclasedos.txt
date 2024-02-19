@@ -1,0 +1,9 @@
+ibreria Numbpy, el array:
+estructura central de Numbpy.
+Representa datos de una manera estructurada indexado.
+Acceso a uno o muchos elementos
+
+import numpy as np 
+a = np.array([1, 2, 3])
+     a
+     array([1, 2, 3])
